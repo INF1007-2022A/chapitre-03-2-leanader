@@ -3,32 +3,47 @@
 
 def dissipated_power(voltage, resistance):
 	# TODO: Calculer la puissance dissipée par la résistance.
-	return 0
+	return (voltage ** 2) / resistance
 
 def orthogonal(v1, v2):
 	# TODO: Retourner vrai si les vecteurs sont orthogonaux, faux sinon.
-	v1[0] # Pour accéder au X
-	v1[1] # Pour accéder au Y
-	pass
+	# v1[0] Pour accéder au X
+	# v1[1] Pour accéder au Y
+	#pass ?
+	produit_scalaire= (v1[0]*v2[0]) + (v1[1]*v2[1])
+	return produit_scalaire==0
+
+
+
 
 def average(values):
 	# TODO: Calculer la moyenne des valeurs positives (on ignore les valeurs strictement négatives).
 	for v in values:
-		pass # La variable v contient une valeur de la liste.
+		sum = num_elems = 0
+		if v>=0:
+			sum += v
+			num_elems += 1
+		#pass # La variable v contient une valeur de la liste.
 
 def bills(value):
 	# TODO: Calculez le nombre de billets de 20$, 10$ et 5$ et pièces de 1$ à remettre pour représenter la valeur.
 	while value != 0:
 		if value >= 20:
-			pass
-		elif value >= 10:
-			pass
-		elif value >= 5:
-			pass
-		elif value >= 1:
-			pass
+			twenties = value // 20
+			value = value % 20
 
-	return (twenties, tens, fives, twos, ones);
+		elif value >= 10:
+			tens = value // 10
+			value = value % 10
+
+		elif value >= 5:
+			fives = value // 5
+			value = value % 5
+		elif value >= 1:
+			ones = value // 1
+			value = value % 1
+
+	return (twenties, tens, fives, ones);
 
 def format_base(value, base, digit_letters):
 	# Formater un nombre dans une base donné en utilisant les lettres fournies pour les chiffres<
@@ -36,7 +51,10 @@ def format_base(value, base, digit_letters):
 	result = ""
 	abs_value = abs(value)
 	while abs_value != 0:
-		pass
+		if base = 16 and digit_letters= "0123456789ABCDEF"
+
+
+
 	if value < 0:
 		# TODO: Ne pas oublier d'ajouter '-' devant pour les nombres négatifs.
 		pass

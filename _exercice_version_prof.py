@@ -11,7 +11,7 @@ def orthogonal(v1, v2):
 	# v1[0] Pour accéder au X
 	# v1[1] Pour accéder au Y
 
-	dot_product = v1[0] * v2[0] + v1[1] * v2[1]
+	dot_product = (v1[0] * v2[0]) + (v1[1] * v2[1])
 	return dot_product == 0
 
 def average(values):
